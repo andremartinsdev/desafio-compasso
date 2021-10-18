@@ -1,0 +1,29 @@
+.c-section-user {
+    width: 40%;
+    background: rgb(235, 233, 233);
+    border-radius: 5px;
+    border-bottom: 10px solid #1c75be;
+    margin-top: 15px;
+    
+    @media screen and (max-width: 320px) {
+        width: 90%;
+        margin-top: 15px;
+    }
+
+    @media screen and (min-width: 320px) {
+        width: 98%;
+        margin-top: 15px;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 60%;
+
+        margin-top: 15px;
+    }
+
+    @media screen and (min-width: 1020px) {
+        width: 40%;
+        margin-top: 15px;
+    }
+
+}

@@ -1,0 +1,26 @@
+.btnBack {
+    transition: 0.5s;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.01);
+        transition: ease 0.3s;
+    }
+}
+
+.c-nav {
+    background-color: #283e51;
+    border-radius: 5px;
+}
+
+.c-nav_button {
+    width: 50px;
+    transition: 0.5s;
+    .icon {
+        margin: 10px;
+    }
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.01);
+        transition: ease 0.3s;
+    }
+}
