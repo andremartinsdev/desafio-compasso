@@ -1,7 +1,10 @@
+@import '../../assets/styles/main';
+
+
 .c-card {
     border-radius: 5px;
     margin-top: 10px;
-    background-color: rgb(235, 233, 233);
+    background-color: $color-primary;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
@@ -15,7 +18,7 @@
         background-color: rgb(196, 193, 193);
     }
     h1 {
-        color: #504d4d;
+        color: $color-text;
         font-size: 15px;
         padding: 5px;
     }

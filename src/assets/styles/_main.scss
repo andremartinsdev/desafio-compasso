@@ -1,0 +1,9 @@
+
+$color-primary: rgb(235, 233, 233);
+$color-text: #504d4d;
+
+@mixin gradientBackground {
+    background: #4B79A1;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #283E51, #4B79A1);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #283E51, #4B79A1); 
+}

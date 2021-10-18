@@ -1,3 +1,5 @@
+@import '../../assets/styles/main';
+
 .c-header {
     width: 40%;
     height: 130px;
@@ -31,7 +33,7 @@
 
 .c-header__title {
     padding: 15px 0;
-    color: rgb(235, 233, 233);
+    color: $color-primary;
     font-size: 30px;
     font-weight: 700;
     text-align: center;
@@ -43,7 +45,7 @@
     width: 75%;
     padding: 5px;
     border-radius: 5px;
-    color: #504d4d;
+    color: $color-text;
     font-size: 15px;
     margin-right: 2px;
 }

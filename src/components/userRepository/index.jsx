@@ -11,11 +11,10 @@ import { Navigation } from '../navigation';
 const UserRepository = props => {
 
     const ctx = useContext(context)
-    console.log(ctx.userRepos)
     return (
         <section className="c-user-repos">
 
-<Navigation/>
+            <Navigation />
 
             <div className="c-user-repos__item">
                 {ctx.userRepos.length > 0 ?
