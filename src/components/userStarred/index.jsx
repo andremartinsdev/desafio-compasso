@@ -23,7 +23,7 @@ const UserRepository = props => {
                         {ctx.userStarredData.map((repos) =>
                             <CardUserRepository name={repos.name} language={repos.language} starred={true} />
                         )}
-                    </div> : <div className="notRepository"> <AiFillMinusCircle size={60} color={"#ebe9e9"} /> <h1 className="notRepository__msg">Nenhum Repositório Disponível</h1> </div>}
+                    </div> : <div className="notRepository"> <AiFillMinusCircle size={60} color={"#ebe9e9"} /> <h1 className="notRepository__msg">Nenhum Favorito Encontrado</h1> </div>}
             </div>
         </section>
     )

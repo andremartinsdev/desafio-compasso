@@ -26,7 +26,7 @@ return(
             </div>
             <div>
                 <h1>{props.repos}</h1>
-                <h2>Repositórios</h2>
+                <h2>Meus Repositórios</h2>
             </div>
         </div>
 

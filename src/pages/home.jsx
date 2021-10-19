@@ -10,21 +10,24 @@ import UserNumbers from '../components/userNumbers';
 
 export default function Home() {
 
-   
-  
+
+
     const ctx = useContext(context)
- 
+
     return (
         <Container>
             <Header />
             <UserContainer>
-            {ctx.userData?.name ?
-            <React.Fragment>
-                <UserAvatar url={ctx.userData?.avatar_url} />
-                <UserInformation name={ctx.userData?.name} login={ctx.userData?.login} bio={ctx.userData?.bio} />
-                <UserNumbers repos={ctx.userData?.public_repos || 0} starred={ctx.userStarred}/>
-                </React.Fragment>
-                : undefined}
+                {ctx.userData?.name ?
+                    <React.Fragment>
+                        <UserAvatar url={ctx.userData?.avatar_url} />
+                        <UserInformation name={ctx.userData?.name}
+                            login={ctx.userData?.login}
+                            bio={ctx.userData?.bio}
+                            location={ctx.userData?.location} />
+                        <UserNumbers repos={ctx.userData?.public_repos || 0} starred={ctx.userStarred} />
+                    </React.Fragment>
+                    : undefined}
             </UserContainer>
         </Container>
     );
