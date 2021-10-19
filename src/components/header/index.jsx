@@ -5,17 +5,20 @@ import api from '../../services/client';
 import './styles.scss'
 
 import { context } from '../../context';
+import { useParams } from 'react-router';
 
 const Header = () => {
 
     const ctx = useContext(context)
     const [searchedValue, setSearchedValue] = useState('')
     const [token, setToken] = useState('')
-
+    
+    const { username } = useParams();
 
     useEffect(async () => {
         await getToken()
-
+        if(username)
+            getUser()
     }, []);
 
     function _handleKeyDown(e){
@@ -41,9 +44,9 @@ const Header = () => {
 
     const getUser = async () => {
         try {
-            const { data } = await api.get(`/${searchedValue}`, {
+            const { data } = await api.get(`/${searchedValue === '' ? username : searchedValue}`, {
                 headers: {
-                    Authorization: 'Bearer ' + token === "" ? sessionStorage.getItem("token") : null
+                    Authorization: 'Bearer ' + (token === "" ? sessionStorage.getItem("token") : token)
                 }
             })
             ctx.setUserData(data)
@@ -56,9 +59,9 @@ const Header = () => {
 
     const getRepos = async () => {
         try {
-            const { data } = await api.get(`/${searchedValue}/repos`, {
+            const { data } = await api.get(`/${searchedValue === '' ? username : searchedValue}/repos`, {
                 headers: {
-                    Authorization: 'Bearer ' + token === "" ? sessionStorage.getItem("token") : null
+                    Authorization: 'Bearer ' + (token === "" ? sessionStorage.getItem("token") : token)
                 }
             })
             ctx.setUserRepos(data)
@@ -70,9 +73,9 @@ const Header = () => {
 
     const getStarred = async () => {
         try {
-            const { data } = await api.get(`/${searchedValue}/starred`, {
+            const { data } = await api.get(`/${searchedValue === '' ? username : searchedValue}/starred`, {
                 headers: {
-                    Authorization: 'Bearer ' + token === "" ? sessionStorage.getItem("token") : null
+                    Authorization: 'Bearer ' + (token === "" ? sessionStorage.getItem("token") : token)
                 }
             })
             ctx.setUserStarred(data.length)

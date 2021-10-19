@@ -7,7 +7,10 @@ import UserAvatar from '../components/userAvatar';
 import UserInformation from '../components/userInformation';
 import UserNumbers from '../components/userNumbers';
 
+
 export default function Home() {
+
+   
   
     const ctx = useContext(context)
  

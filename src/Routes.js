@@ -15,10 +15,11 @@ import Starred from './pages/starred';
 const Routes = () => (
     <BRouter>
         <Switch>
-            <Route exact path="/home" component={Home} />
+            <Route exact path={["/home", "/home/:username"]} component={Home} />
             <Route exact path="/repository" component={Repository} />
             <Route exact path="/starred" component={Starred} />
             <Route path="/" exact component={Login} />
+            
         </Switch>
     </BRouter>
 );

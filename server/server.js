@@ -21,7 +21,7 @@ app.get('/auth/redirect', async (req, res) => {
   try {
     const { code } = req.query
     user.code = code
-    return res.redirect('http://localhost:3000/Home')
+    return res.redirect('http://localhost:3000/home')
   } catch (error) {
     return res.status(500)
   }
