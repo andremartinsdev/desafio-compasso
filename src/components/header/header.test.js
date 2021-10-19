@@ -36,7 +36,6 @@ describe("test requests for github api", () => {
                 Authorization: 'Bearer ' + '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'
             }
         })
-        console.log(data)
         expect(data).toMatchObject(user)
     })
 
