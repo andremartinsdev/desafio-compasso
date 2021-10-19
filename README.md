@@ -6,4 +6,4 @@
  encarregado de lidar com as requests de autenticação para api do github e retornar o token para o front-end<p/>
 
 
-<b> OBS: A rota <i>http://localhost:3000/home/NOME_USUARIO</i> recebe o parametro NOME_USUARIO para busca direta</B>
+<b> OBS: A rota <i>http://localhost:3000/home/NOME_USUARIO</i> recebe o parâmetros NOME_USUARIO para busca direta</B>
